@@ -40,13 +40,22 @@ public class UserService {
         Instant joinedDate = Instant.now()
                 .minus(faker.number().numberBetween(1, 730), ChronoUnit.DAYS);
 
+        // Generate consistent avatar URL using DiceBear API (works reliably)
+        // Note: JavaFaker's avatar() generates deprecated S3 URLs that return 403
+        String firstName = faker.name().firstName();
+        String lastName = faker.name().lastName();
+        String avatarUrl = String.format(
+                "https://api.dicebear.com/7.x/avataaars/svg?seed=%s",
+                username + faker.number().numberBetween(1, 1000)
+        );
+
         return UserInfo.builder()
                 .id(UUID.randomUUID().toString())
                 .username(username)
                 .email(faker.internet().emailAddress())
-                .firstName(faker.name().firstName())
-                .lastName(faker.name().lastName())
-                .avatar(faker.internet().avatar())
+                .firstName(firstName)
+                .lastName(lastName)
+                .avatar(avatarUrl)
                 .phone(faker.phoneNumber().phoneNumber())
                 .address(Address.builder()
                         .street(faker.address().streetAddress())

@@ -58,6 +58,7 @@ export default function UserProfile({ user }: { user: UserData }) {
                 alt={`${user.firstName} ${user.lastName}`}
                 fill
                 className="object-cover"
+                unoptimized
               />
             </div>
             <div>

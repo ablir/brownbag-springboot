@@ -12,7 +12,7 @@ export default async function DashboardPage() {
   // Fetch user data from backend
   const username = session.user.name || 'user';
   const response = await fetch(
-    `http://localhost:3001/api/user/info?username=${username}`,
+    `http://localhost:3001/api/user/infos?username=${username}`,
     {
       cache: 'no-store',
     }

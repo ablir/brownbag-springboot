@@ -30,6 +30,7 @@ A modern full-stack application combining **Next.js 15** (App Router) with **Spr
 - [API Endpoints](#-api-endpoints)
 - [Spring Boot Modern Practices](#-spring-boot-modern-practices)
 - [Development](#-development)
+- [Documentation](#-documentation)
 
 ## 🚀 Technology Stack
 
@@ -473,6 +474,15 @@ Spring Boot 3.4 with Java 21 benefits:
 3. Commit changes (`git commit -m 'Add amazing feature'`)
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open Pull Request
+
+## 📚 Documentation
+
+Comprehensive documentation is available:
+
+- **[README.md](README.md)** - This file, project overview and quick start
+- **[SETUP.md](SETUP.md)** - Detailed setup guide with troubleshooting
+- **[COMMANDS_SUMMARY.md](COMMANDS_SUMMARY.md)** - All commands used to set up the project
+- **[MIGRATION.md](MIGRATION.md)** - Migration guide from Express to Spring Boot
 
 ## 📄 License
 

@@ -252,6 +252,30 @@ kill -9 <PID>
 - Normal for Spring Boot (3-5 seconds in dev mode)
 - Use production build for faster startup (~2 seconds)
 
+## Setup Commands Reference
+
+For complete setup instructions and all commands used, see:
+- **[SETUP.md](SETUP.md)** - Comprehensive setup guide
+- **[COMMANDS_SUMMARY.md](COMMANDS_SUMMARY.md)** - Command reference
+
+### Quick Setup
+
+```bash
+# Install prerequisites
+brew install openjdk@21 maven
+
+# Set Java 21
+export JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+export PATH="$JAVA_HOME/bin:$PATH"
+
+# Clone and start
+git clone https://github.com/ablir/brownbag-springboot.git
+cd brownbag-springboot
+./start.sh
+```
+
+Access at http://localhost:9898
+
 ## Conclusion
 
 This migration brings enterprise-grade features while maintaining complete API compatibility. The frontend continues to work without any changes, and the backend is now ready for advanced features like database integration, advanced security, and microservices architecture.
@@ -264,6 +288,11 @@ The Spring Boot backend provides:
 - ✅ Enterprise-grade security options
 - ✅ Excellent developer experience
 
+## Related Repositories
+
+- **Original (Express):** https://github.com/ablir/brownbag-nextjs
+- **Spring Boot (This Repo):** https://github.com/ablir/brownbag-springboot
+
 ---
 
-For the original Express version, see: https://github.com/ablir/brownbag-nextjs
+For detailed setup instructions, see [SETUP.md](SETUP.md)

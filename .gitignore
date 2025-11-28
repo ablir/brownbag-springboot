@@ -1,0 +1,20 @@
+# PID files
+.backend.pid
+.frontend.pid
+.nginx.pid
+
+# Logs
+*.log
+backend-build.log
+backend.log
+frontend.log
+nginx.log
+
+# macOS
+.DS_Store
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
